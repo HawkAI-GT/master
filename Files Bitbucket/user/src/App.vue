@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <v-app>
     <Login />
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -11,10 +11,15 @@ export default {
   components: {
     Login
   },
-  data() {},
+  data() {
+    return {};
+  },
   methods: {}
 };
 </script>
 
 <style>
+#app {
+  flex: 1;
+}
 </style>

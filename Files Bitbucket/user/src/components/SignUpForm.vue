@@ -1,8 +1,8 @@
 <template>
     <div class="SignUpForm">
-        <v-form>
+        <v-form ref="form" v-model="valid" lazy-validation>
             <v-row justify="center">
-                <v-col cols="10">
+                <v-col cols="10" class="text-center">
                     <v-text-field
                         :rules="campoRules"
                         label="Solo"
@@ -38,13 +38,15 @@
                     <v-checkbox
                         v-model="checkbox"
                         :rules="[v => !!v || 'Debe de aceptar los términos y condiciones']"
-                        label="Aceptar términos y condiciones?"
+                        label="Acepto términos y condiciones."
                         required
                     ></v-checkbox>
                     <v-btn
+                        align="center"
                         :disabled="!valid"
-                        color="success"
+                        color="#002649"
                         @click="validate"
+                        class="text-none"
                     >
                     Registrarse
                     </v-btn>
@@ -77,4 +79,7 @@ export default {
 </script>
 
 <style scoped>
+
+    
+
 </style>

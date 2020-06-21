@@ -64,4 +64,9 @@ export default {
   font-weight: 400;
   font-size: 0.8rem;
 }
+
+@font-face {
+  font-family: CaviarDreams_Italic;
+  src: url("../assets/fonts/CaviarDreams_Italic.ttf");
+}
 </style>

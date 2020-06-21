@@ -23,7 +23,7 @@
             <FacebookLoginButton />
           </v-col>
           <v-col>
-            <button class="button" @click="logInWithFacebook">Sign Up</button>
+            <button class="button">Sign Up</button>
           </v-col>
         </v-row>
       </v-container>

@@ -1,44 +1,39 @@
 <template>
     <div class="SignUpForm">
         <v-form ref="form" v-model="valid" lazy-validation>
-            <v-row justify="center">
+            <v-row justify="center" align="center">
                 <v-col cols="10" class="text-center">
                     <v-text-field
+                        v-model="info.name"
                         :rules="campoRules"
                         label="Solo"
-                        placeholder="Nombres"
+                        placeholder="Full Name"
                         solo
                         required
                     ></v-text-field>
                     <v-text-field
+                        v-model="info.email"
                         :rules="campoRules"
                         label="Solo"
-                        placeholder="Apellidos"
+                        placeholder="Email"
                         solo
                         required
                     ></v-text-field>
                     <v-text-field
-                        :rules="campoRules"
-                        label="Solo"
-                        placeholder="Correo Electrónico"
-                        solo
-                        required
-                    ></v-text-field>
-                    <v-text-field
-                        v-model="password"
+                        v-model="info.password"
                         :rules="campoRules"
                         :append-icon="showp ? 'mdi-eye' : 'mdi-eye-off'"
                         :type="showp ? 'text' : 'password'"
                         @click:append="showp = !showp"
                         label="Solo"
-                        placeholder="Contraseña"
+                        placeholder="Password"
                         solo
                         required
                     ></v-text-field>
                     <v-checkbox
                         v-model="checkbox"
-                        :rules="[v => !!v || 'Debe de aceptar los términos y condiciones']"
-                        label="Acepto términos y condiciones."
+                        :rules="[v => !!v || 'You have to agree to the terms and conditions!']"
+                        label="Agree terms and conditions"
                         required
                     ></v-checkbox>
                     <v-btn
@@ -46,7 +41,7 @@
                         :disabled="!valid"
                         color="#002649"
                         @click="validate"
-                        class="text-none"
+                        class="text-none white--text"
                     >
                     Registrarse
                     </v-btn>
@@ -62,24 +57,27 @@ export default {
     data(){
         return{
             showp:false,
-            password:'',
+            info:{
+                name:'',
+                email:'',
+                password:''
+            },
             checkbox:false,
             valid:true,
             campoRules: [
-                v => !!v || 'Este campo es obligatorio'
+                v => !!v || 'This field is mandatory'
             ]
         }
     },
     methods:{
         validate(){
-            this.$refs.form.validate()
+            if(this.$refs.form.validate()){
+                console.log(this.info)
+            }
         }
     }
 }
 </script>
 
 <style scoped>
-
-    
-
 </style>

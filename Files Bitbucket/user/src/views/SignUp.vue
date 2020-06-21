@@ -1,6 +1,6 @@
 <template>
   <div class="signup">
-    <h1>Hawk AI Sign Up</h1>
+    <h1 class="text-center my-2">Sign Up</h1>
     <SignUpForm />
   </div>
 </template>
@@ -17,5 +17,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

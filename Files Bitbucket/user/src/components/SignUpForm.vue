@@ -1,6 +1,6 @@
 <template>
     <div class="SignUpForm">
-        <v-form ref="form" v-model="valid" lazy-validation>
+        <v-form name="signup" ref="form" v-model="valid" lazy-validation>
             <v-row justify="center" align="center">
                 <v-col cols="10" class="text-center">
                     <v-text-field

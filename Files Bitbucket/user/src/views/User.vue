@@ -1,8 +1,7 @@
 <template>
   <v-card class="mx-auto" max-width="434" tile>
-    <UserPic v-bind:user="user" />
-    <v-card-subtitle class="pb-0">Account Information</v-card-subtitle>
     <UserInfo v-bind:user="user" />
+    <v-card-subtitle class="pb-0">Account Information</v-card-subtitle>
     <v-divider class="mx-4"></v-divider>
     <AccountInfo />
     <v-divider class="mx-4"></v-divider>
@@ -12,7 +11,7 @@
 </template>
 
 <script>
-import UserPic from "../components/UserInfo.vue";
+import UserInfo from "../components/UserInfo.vue";
 import ButtonEdit from "../components/ButtonEdit";
 import AccountInfo from "../components/AccountInfo";
 import Support from "../components/Support";
@@ -21,7 +20,7 @@ export default {
   name: "User",
 
   components: {
-    UserPic,
+    UserInfo,
     ButtonEdit,
     AccountInfo,
     Support
@@ -30,7 +29,7 @@ export default {
     return {
       user: {
         name: "Marcus Obrien",
-        job: "Network Engineer",
+        mall: "Oakland Mall",
         age: "26",
         email: "example@aja.com",
         dir: "My house",

@@ -6,11 +6,11 @@
       <v-container class="formContainer">
         <v-row>
           <v-col>
-            <v-text-field label="Nombre de Usuario" single-line solo dense></v-text-field>
+            <v-text-field label="Username" single-line solo dense></v-text-field>
             <v-text-field
               :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
               :type="showPassword ? 'text' : 'password'"
-              label="Contraseña"
+              label="Password"
               @click:append="showPassword = !showPassword"
               single-line
               solo

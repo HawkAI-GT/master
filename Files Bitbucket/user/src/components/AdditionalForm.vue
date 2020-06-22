@@ -6,32 +6,33 @@
                     <v-dialog
                         ref="dialog"
                         v-model="modal"
-                        :return-value.sync="date"
+                        :return-value.sync="info.date"
                         persistent
                         width="290px"
                     >
                         <template v-slot:activator="{ on, attrs }">
                         <v-text-field
-                            v-model="date"
+                            v-model="info.date"
                             label="Choose your birth date"
                             readonly
                             v-bind="attrs"
                             v-on="on"
                         ></v-text-field>
                         </template>
-                        <v-date-picker v-model="date" scrollable>
+                        <v-date-picker v-model="info.date" scrollable>
                         <v-spacer></v-spacer>
                         <v-btn text color="primary" @click="modal = false">Cancel</v-btn>
-                        <v-btn text color="primary" @click="$refs.dialog.save(date)">OK</v-btn>
+                        <v-btn text color="primary" @click="$refs.dialog.save(info.date)">OK</v-btn>
                         </v-date-picker>
                     </v-dialog>
                     <v-select
+                    v-model="info.gender"
                     :items="items"
                     label="Gender"
                     solo
                     ></v-select>
                     <p>Select the subjects you are interested in:</p>
-                    <ImageGrid />
+                    <ImageGrid @cards="verificar"/>
                     <v-btn
                         color="#002649"
                         @click="send"
@@ -57,11 +58,10 @@ export default {
         return{
             items: ['Female', 'Male', 'Other'],
             info:{
-                name:'',
-                email:'',
-                password:''
+                date: new Date().toISOString().substr(0, 10),
+                gender:'',
+                activity:[]
             },
-            date: new Date().toISOString().substr(0, 10),
             menu: false,
             modal: false,
         }
@@ -69,6 +69,9 @@ export default {
     methods:{
         send(){
             console.log(this.info);
+        },
+        verificar(valor){
+            this.info.activity = valor;
         }
     }
 }

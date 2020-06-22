@@ -1,5 +1,6 @@
 <template>
   <v-row>
+      <v-icon>fas fa-edit</v-icon>
     <v-col cols="12" sm="6" offset-sm="3">
       <v-card 
       >
@@ -11,9 +12,9 @@
               class="d-flex child-flex"
               cols="6"
             >
-              <v-card flat tile class="d-flex hola" @click="selected(n)" :name="`$n`">
+              <v-card flat tile class="d-flex" @click="selected(n)">
                 <v-img
-                  :src="`https://hawkai-frontend.s3.amazonaws.com/${n}.jpg`"
+                  :src="`https://hawkai-frontend.s3.amazonaws.com/${n}-min.jpg`"
                   aspect-ratio="1"
                   class="grey lighten-2 white--text align-end transparente"
                 >
@@ -41,12 +42,15 @@
 export default {
     data(){
         return{
+            activity:[false,false,false,false,false,false,false,false],
             temas:["Coffe","Shoes","Food","Pets","Clothes","Action","Tech","Toys"]
         }
     },
     methods:{
         selected(e){
             console.log(e);
+            this.activity[e - 1] = true
+            this.$emit('cards',this.activity)
         }
     }
 }

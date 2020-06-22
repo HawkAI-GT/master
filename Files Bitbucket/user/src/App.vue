@@ -1,10 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -24,37 +20,50 @@
           width="100"
         />
       </div>
-
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+      <v-btn flat color="white">
+        <router-link to="/user">Profile</router-link>
       </v-btn>
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+      <router-view />
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+//import HelloWorld from "./components/HelloWorld";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
-    HelloWorld,
+    //HelloWorld
   },
 
   data: () => ({
     //
-  }),
+  })
 };
 </script>
+
+<style>
+@font-face {
+  font-family: "Caviar-Dreams";
+  src: url("./assets/fonts/webfonts_Caviar-Dreams/Caviar-Dreams.ttf.woff")
+      format("woff"),
+    url("./assets/fonts/webfonts_Caviar-Dreams/Caviar-Dreams.ttf.svg#Caviar-Dreams")
+      format("svg"),
+    url("./assets/fonts/webfonts_Caviar-Dreams/Caviar-Dreams.ttf.eot"),
+    url("./assets/fonts/webfonts_Caviar-Dreams/Caviar-Dreams.ttf.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#app {
+  flex: 1;
+  font-family: "Caviar-Dreams";
+}
+</style>

@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component EditProfile renders correctly 1`] = `
+<v-card
+  class="mx-auto"
+  max-width="434"
+  tile=""
+>
+  <v-img
+    height="100%"
+    src="https://cdn.vuetifyjs.com/images/cards/server-room.jpg"
+  >
+    <v-row
+      align="end"
+      class="fill-height"
+    >
+      <v-col
+        align-self="start"
+        class="pa-0"
+        cols="12"
+      >
+        <v-avatar
+          class="profile"
+          color="grey"
+          size="164"
+          tile=""
+        >
+          <v-img
+            src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
+          />
+        </v-avatar>
+      </v-col>
+       
+      <v-col
+        class="py-0"
+      >
+        <v-list-item
+          color="rgba(0, 0, 0, .4)"
+          dark=""
+        >
+          <v-list-item-content>
+            <v-list-item-title
+              class="title"
+            >
+              Marcus Obrien
+            </v-list-item-title>
+             
+            <v-list-item-subtitle>
+              Network Engineer
+            </v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-col>
+    </v-row>
+  </v-img>
+   
+  <v-card-subtitle
+    class="pb-0"
+  >
+    Account Information
+  </v-card-subtitle>
+   
+  <v-card-text
+    class="text--primary"
+  >
+    <div>
+      <v-text-field
+        label="E-mail"
+        prepend-icon="mdi-email"
+      />
+       
+      <v-text-field
+        label="Phone"
+        prepend-icon="mdi-phone"
+      />
+       
+      <v-text-field
+        label="Direction"
+        prepend-icon="mdi-map-marker"
+      />
+       
+      <v-text-field
+        label="Age"
+        prepend-icon="mdi-chart-donut"
+      />
+       
+      <v-autocomplete
+        items="Male,Female,Other"
+        label="Sex"
+        placeholder="Male"
+        prepend-icon="mdi-gender-male-female"
+        required=""
+        rules="function () { return !!_vm.sex || 'This field is required'; }"
+      />
+    </div>
+  </v-card-text>
+   
+  <v-card-actions>
+    <v-btn
+      color="red"
+      outlined=""
+      text=""
+      to="/user"
+    >
+      Cancel
+    </v-btn>
+     
+    <v-spacer />
+     
+    <v-btn
+      color="green"
+      outlined=""
+      text=""
+      to="/user"
+    >
+      Save
+    </v-btn>
+  </v-card-actions>
+</v-card>
+`;

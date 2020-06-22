@@ -46,7 +46,7 @@ exports[`Component EditProfile renders correctly 1`] = `
             </v-list-item-title>
              
             <v-list-item-subtitle>
-              Network Engineer
+              Oakland Mall
             </v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>

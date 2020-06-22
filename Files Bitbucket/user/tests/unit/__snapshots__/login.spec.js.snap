@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component FacebookLoginButton renders correctly 1`] = `
+<div>
+  <button
+    class="button"
+    elevation="5"
+  >
+    Login with Facebook
+  </button>
+</div>
+`;
+
+exports[`Component Login renders correctly 1`] = `
+<div>
+  <div
+    class="imageContainer"
+  >
+    <v-img
+      height="100vh"
+      max-height="100vh"
+      src="../assets/vertical_background.png"
+    />
+  </div>
+   
+  <v-form>
+    <v-container
+      class="formContainer"
+    >
+      <v-row>
+        <v-col>
+          <v-text-field
+            dense=""
+            label="Username"
+            name="username"
+            single-line=""
+            solo=""
+          />
+           
+          <v-text-field
+            append-icon="mdi-eye-off"
+            dense=""
+            label="Password"
+            name="password"
+            single-line=""
+            solo=""
+            type="password"
+          />
+        </v-col>
+      </v-row>
+       
+      <v-row>
+        <v-col>
+          <button
+            class="button"
+            style="width: 100%;"
+          >
+            Log In
+          </button>
+        </v-col>
+      </v-row>
+       
+      <v-row>
+        <v-col
+          class="d-flex justify-center"
+        >
+          <div>
+            <button
+              class="button"
+              elevation="5"
+            >
+              Login with Facebook
+            </button>
+          </div>
+        </v-col>
+         
+        <v-col
+          class="d-flex justify-center"
+        >
+          <button
+            class="button"
+          >
+            Sign Up
+          </button>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-form>
+   
+  <div
+    class="formContainer"
+  />
+</div>
+`;
+
+exports[`Component LoginBackground renders correctly 1`] = `
+<div
+  class="imageContainer"
+>
+  <v-img
+    height="100vh"
+    max-height="100vh"
+    src="../assets/vertical_background.png"
+  />
+</div>
+`;

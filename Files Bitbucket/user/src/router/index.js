@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -22,10 +22,27 @@ Vue.use(VueRouter)
     path: '/signup',
     name: 'SignUp',
     component: () => import(/* webpackChunkName: "signup" */ '../views/SignUp.vue')
+  },
+  {
+    path: '/additional',
+    name: 'AdditionalInfo',
+    component: () => import(/* webpackChunkName: "signup" */ '../views/AdditionalInfo.vue')
+  },
+  {
+    path: '/userprofile',
+    name: 'Profile',
+    component: () => import(/* webpackChunkName: "userprofile" */ '../views/EditProfile.vue')
+  },
+  {
+    path: '/user',
+    name: 'User',
+    component: () => import(/* webpackChunkName: "userprofile" */ '../views/User.vue')
   }
 ]
 
 const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes
 })
 

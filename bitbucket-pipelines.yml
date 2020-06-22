@@ -13,6 +13,7 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - pwd
           - ls -al
+          - cd Files Bitbucket/user
           - npm install
           - npm run test:unit
           - npm run build

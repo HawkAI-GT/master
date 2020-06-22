@@ -1,8 +1,8 @@
 <template>
   <v-card-actions>
-    <v-btn text>Cancel</v-btn>
+    <v-btn outlined color="red" to="/user" text>Cancel</v-btn>
     <v-spacer></v-spacer>
-    <v-btn color="primary" text @click="submit">Save</v-btn>
+    <v-btn outlined color="green" text to="/user">Save</v-btn>
   </v-card-actions>
 </template>
 

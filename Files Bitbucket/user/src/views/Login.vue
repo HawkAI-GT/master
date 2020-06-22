@@ -19,10 +19,10 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col>
+          <v-col class="d-flex justify-center">
             <FacebookLoginButton />
           </v-col>
-          <v-col>
+          <v-col class="d-flex justify-center">
             <button class="button">Sign Up</button>
           </v-col>
         </v-row>
@@ -63,10 +63,5 @@ export default {
   border-radius: 2rem;
   font-weight: 400;
   font-size: 0.8rem;
-}
-
-@font-face {
-  font-family: CaviarDreams_Italic;
-  src: url("../assets/fonts/CaviarDreams_Italic.ttf");
 }
 </style>

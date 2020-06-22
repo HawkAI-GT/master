@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: "Account Edit"
+  name: "ButtonEdit"
 };
 </script>

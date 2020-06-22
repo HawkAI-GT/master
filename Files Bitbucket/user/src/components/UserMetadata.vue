@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "UserInfo",
+  name: "UserMetadata",
 
   props: ["user"],
 

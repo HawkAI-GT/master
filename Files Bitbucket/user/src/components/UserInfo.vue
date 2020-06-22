@@ -10,7 +10,7 @@
         <v-list-item color="rgba(0, 0, 0, .4)" dark>
           <v-list-item-content>
             <v-list-item-title class="title">{{user.name}}</v-list-item-title>
-            <v-list-item-subtitle>Network Engineer</v-list-item-subtitle>
+            <v-list-item-subtitle>{{user.mall}}</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-col>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: "UserPic",
+  name: "UserInfo",
   props: ["user"]
 };
 </script>

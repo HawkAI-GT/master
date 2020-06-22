@@ -32,6 +32,7 @@ exports[`Component Login renders correctly 1`] = `
           <v-text-field
             dense=""
             label="Username"
+            name="username"
             single-line=""
             solo=""
           />
@@ -40,10 +41,22 @@ exports[`Component Login renders correctly 1`] = `
             append-icon="mdi-eye-off"
             dense=""
             label="Password"
+            name="password"
             single-line=""
             solo=""
             type="password"
           />
+        </v-col>
+      </v-row>
+       
+      <v-row>
+        <v-col>
+          <button
+            class="button"
+            style="width: 100%;"
+          >
+            Log In
+          </button>
         </v-col>
       </v-row>
        

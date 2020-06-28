@@ -30,7 +30,6 @@
       </v-btn>
     </v-app-bar>
 
-    <Login />
 
     <v-content>
       <router-view />
@@ -39,11 +38,9 @@
 </template>
 
 <script>
-import Login from "./views/Login";
 export default {
   name: "App",
   components: {
-    Login
   },
   data() {
     return {};

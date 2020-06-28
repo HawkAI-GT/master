@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import UserInfo from "../components/UserInfo.vue";
+import UserInfo from "../components/UserInfo";
 import ButtonEdit from "../components/ButtonEdit";
 import AccountInfo from "../components/AccountInfo";
 import Support from "../components/Support";

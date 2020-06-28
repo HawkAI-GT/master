@@ -21,7 +21,7 @@
         />
       </div>
       <v-spacer></v-spacer>
-      <v-btn flat color="white">
+      <v-btn text color="white">
         <router-link to="/user">Profile</router-link>
       </v-btn>
       <v-btn href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank" text>

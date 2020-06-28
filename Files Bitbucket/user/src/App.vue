@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <!--- <Login /> -->
-
     <v-content>
       <router-view />
     </v-content>

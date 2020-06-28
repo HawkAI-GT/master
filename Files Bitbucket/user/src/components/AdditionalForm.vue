@@ -37,6 +37,7 @@
                         color="#002649"
                         @click="send"
                         class="text-none white--text"
+                        to="/user"
                     >
                     Send
                     </v-btn>

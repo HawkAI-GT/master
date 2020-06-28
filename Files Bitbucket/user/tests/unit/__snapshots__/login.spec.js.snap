@@ -79,6 +79,7 @@ exports[`Component Login renders correctly 1`] = `
         >
           <button
             class="button"
+            to="/signup"
           >
             Sign Up
           </button>

@@ -37,7 +37,7 @@
             <FacebookLoginButton />
           </v-col>
           <v-col class="d-flex justify-center">
-            <button class="button" @click="gotoSignUp">Sign Up</button>
+            <button class="button" @click="gotoSignUp" to="/signup">Sign Up</button>
           </v-col>
         </v-row>
       </v-container>

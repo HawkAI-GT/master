@@ -85,6 +85,7 @@ export default {
                                 displayName: this.info.name
                             })
                             .then(() => {});
+                        this.$router.replace({ name: "Feed" });
                     })
                     .catch(err => {
                         this.error = err.message;

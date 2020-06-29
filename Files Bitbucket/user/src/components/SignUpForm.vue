@@ -52,10 +52,14 @@
 </template>
 
 <script>
+import firebase from "firebase"
+
 export default {
+
     name:"SignUpForm",
     data(){
         return{
+            error:'',
             showp:false,
             info:{
                 name:'',
@@ -72,7 +76,20 @@ export default {
     methods:{
         validate(){
             if(this.$refs.form.validate()){
-                console.log(this.info)
+                firebase
+                    .auth()
+                    .createUserWithEmailAndPassword(this.info.email, this.info.password)
+                    .then(data => {
+                        data.user
+                            .updateProfile({
+                                displayName: this.info.name
+                            })
+                            .then(() => {});
+                    })
+                    .catch(err => {
+                        this.error = err.message;
+                        console.log(this.error);
+                    })
             }
         }
     }

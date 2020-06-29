@@ -13,6 +13,7 @@
               single-line
               solo
               dense
+              @click="tryAgain"
             ></v-text-field>
             <v-text-field
               :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
@@ -21,6 +22,7 @@
               v-model="password"
               name="password"
               @click:append="showPassword = !showPassword"
+              @click="tryAgain"
               single-line
               solo
               dense
@@ -28,8 +30,13 @@
           </v-col>
         </v-row>
         <v-row>
+          <v-col cols="10">
+            <h3 class="errormsg text-center">{{errormsg}}</h3>
+          </v-col>
+        </v-row>
+        <v-row>
           <v-col>
-            <button class="button" style="width: 100%" @click="simpleLogIn">Log In</button>
+            <v-btn class="button"  color="#002649" style="width: 100%" @click="simpleLogIn">Log In</v-btn>
           </v-col>
         </v-row>
         <v-row>
@@ -37,7 +44,7 @@
             <FacebookLoginButton />
           </v-col>
           <v-col class="d-flex justify-center">
-            <button class="button" @click="gotoSignUp" to="/signup">Sign Up</button>
+            <button class="button" @click="gotoSignUp">Sign Up</button>
           </v-col>
         </v-row>
       </v-container>
@@ -49,6 +56,8 @@
 <script>
 import LoginBackground from "../components/LoginBackground";
 import FacebookLoginButton from "../components/FacebookLoginButton";
+import firebase from "firebase"
+
 export default {
   name: "Login",
   components: {
@@ -57,6 +66,7 @@ export default {
   },
   data() {
     return {
+      errormsg: '',
       showPassword: false,
       username: "",
       password: ""
@@ -65,11 +75,24 @@ export default {
   methods: {
     simpleLogIn() {
       //TODO: Function to Login with username and password from database
-      console.log("Log in with username and password");
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(this.username, this.password)
+        .then(data => {
+          this.$router.replace({name: 'Feed'});
+          console.log(data.username);
+        })
+        .catch(err => {
+          console.log(err);
+          this.errormsg = "Mail or password is not correct!"
+        })
     },
     gotoSignUp() {
       //TODO: Router-link to sign up page
       console.log("Redirect to SignUp page");
+    },
+    tryAgain(){
+      this.errormsg = '';
     }
   }
 };
@@ -88,5 +111,9 @@ export default {
   border-radius: 2rem;
   font-weight: 400;
   font-size: 0.8rem;
+}
+
+.errormsg{
+  color: red
 }
 </style>

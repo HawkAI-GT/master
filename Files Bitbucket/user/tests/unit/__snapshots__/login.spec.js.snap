@@ -90,11 +90,13 @@ exports[`Component Login renders correctly 1`] = `
         <v-col
           class="d-flex justify-center"
         >
-          <button
+          <v-btn
             class="button"
+            color="#002649"
+            style="width: 100%;"
           >
             Sign Up
-          </button>
+          </v-btn>
         </v-col>
       </v-row>
     </v-container>

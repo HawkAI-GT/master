@@ -44,7 +44,7 @@
             <FacebookLoginButton />
           </v-col>
           <v-col class="d-flex justify-center">
-            <button class="button" @click="gotoSignUp">Sign Up</button>
+            <v-btn class="button" color="#002649" style="width: 100%" @click="gotoSignUp">Sign Up</v-btn>
           </v-col>
         </v-row>
       </v-container>
@@ -90,6 +90,7 @@ export default {
     gotoSignUp() {
       //TODO: Router-link to sign up page
       console.log("Redirect to SignUp page");
+      this.$router.replace({name: 'SignUp'});
     },
     tryAgain(){
       this.errormsg = '';

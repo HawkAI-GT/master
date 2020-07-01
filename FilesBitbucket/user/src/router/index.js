@@ -5,6 +5,11 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/',
+    name: 'Login',
+    component: () => import(/* webpackChunkName: "userprofile" */ '../views/Login.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
@@ -36,11 +41,6 @@ const routes = [
     path: '/feed',
     name: 'Feed',
     component: () => import(/* webpackChunkName: "userprofile" */ '../views/Feed.vue')
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: () => import(/* webpackChunkName: "userprofile" */ '../views/Login.vue')
   }
 ]
 

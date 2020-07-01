@@ -41,6 +41,11 @@ const routes = [
     path: '/feed',
     name: 'Feed',
     component: () => import(/* webpackChunkName: "userprofile" */ '../views/Feed.vue')
+  },
+  {
+    path: 'coming_soon',
+    name: 'ComingSoon',
+    component: () => import(/* webpackChunkName: "userprofile" */ '../views/ComingSoon.vue')
   }
 ]
 

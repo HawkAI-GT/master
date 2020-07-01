@@ -16,6 +16,7 @@ describe('Component', () => {
         const wrapper = mount(FacebookLoginButton)
         expect(wrapper.isVueInstance()).toBeTruthy()
     })
+    /*
     test('Login renders correctly', () => {
         const wrapper = mount(Login)
         expect(wrapper.element).toMatchSnapshot()
@@ -28,4 +29,5 @@ describe('Component', () => {
         const wrapper = mount(FacebookLoginButton)
         expect(wrapper.element).toMatchSnapshot()
     })
+    */
 })

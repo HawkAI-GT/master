@@ -50,13 +50,26 @@ exports[`Component Login renders correctly 1`] = `
       </v-row>
        
       <v-row>
+        <v-col
+          cols="10"
+        >
+          <h3
+            class="errormsg text-center"
+          >
+            
+          </h3>
+        </v-col>
+      </v-row>
+       
+      <v-row>
         <v-col>
-          <button
+          <v-btn
             class="button"
+            color="#002649"
             style="width: 100%;"
           >
             Log In
-          </button>
+          </v-btn>
         </v-col>
       </v-row>
        

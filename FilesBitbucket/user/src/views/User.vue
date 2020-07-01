@@ -1,13 +1,16 @@
 <template>
-  <v-card class="mx-auto" max-width="434" tile>
-    <UserInfo v-bind:user="user" />
-    <v-card-subtitle class="pb-0">Account Information</v-card-subtitle>
-    <v-divider class="mx-4"></v-divider>
-    <AccountInfo />
-    <v-divider class="mx-4"></v-divider>
-    <Support />
-    <ButtonEdit />
-  </v-card>
+  <div>
+    <v-card class="mx-auto" max-width="434" tile>
+      <UserInfo v-bind:user="user" />
+      <v-card-subtitle class="pb-0">Account Information</v-card-subtitle>
+      <v-divider class="mx-4"></v-divider>
+      <AccountInfo />
+      <v-divider class="mx-4"></v-divider>
+      <Support />
+      <ButtonEdit />
+    </v-card>
+    <BottomNav />
+  </div>
 </template>
 
 <script>
@@ -15,6 +18,7 @@ import UserInfo from "../components/UserInfo";
 import ButtonEdit from "../components/ButtonEdit";
 import AccountInfo from "../components/AccountInfo";
 import Support from "../components/Support";
+import BottomNav from "../components/BottomNav";
 
 export default {
   name: "User",
@@ -23,7 +27,8 @@ export default {
     UserInfo,
     ButtonEdit,
     AccountInfo,
-    Support
+    Support,
+    BottomNav
   },
   data() {
     return {

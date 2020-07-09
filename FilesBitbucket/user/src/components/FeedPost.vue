@@ -3,24 +3,23 @@
     <v-container fluid>
       <v-row dense>
         <v-col v-for="card in cards" :key="card.title" :cols="card.flex">
-          <v-card>
+          <v-card class="rounded-card">
             <v-img
               :src="card.src"
               class="white--text align-end"
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               height="300px"
             >
-              <v-card-title v-text="card.title"></v-card-title>
             </v-img>
 
             <v-card-actions>
+              <v-img :src="card.src" max-height="30px" aspect-ratio="1" />
+              <v-card-title v-text="card.title"></v-card-title>
               <v-spacer></v-spacer>
-
               <v-btn icon>
-                <v-icon>mdi-heart</v-icon>
+                <v-icon x-large>mdi-heart</v-icon>
               </v-btn>
-
-              <v-btn icon>
+              <v-btn icon x-large>
                 <v-icon>mdi-share-variant</v-icon>
               </v-btn>
             </v-card-actions>
@@ -64,9 +63,27 @@ export default {
         title: "Mi café 2X1",
         src: "https://ak.picdn.net/shutterstock/videos/24599282/thumb/3.jpg",
         flex: 12
+      },
+      {
+        title: "Mi café 2X1",
+        src: "https://ak.picdn.net/shutterstock/videos/24599282/thumb/3.jpg",
+        flex: 12
+      },
+      {
+        title: "Mi café 2X1",
+        src: "https://ak.picdn.net/shutterstock/videos/24599282/thumb/3.jpg",
+        flex: 12
       }
     ],
     dialog: false
   })
 };
 </script>
+
+<style scoped>
+
+.rounded-card{
+  border-radius: 15%;
+}
+
+</style>

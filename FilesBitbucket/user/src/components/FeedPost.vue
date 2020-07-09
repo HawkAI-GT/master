@@ -13,7 +13,7 @@
             </v-img>
 
             <v-card-actions>
-              <v-img :src="card.src" max-height="30px" aspect-ratio="1" />
+              <v-img :src="card.src" contain aspect-ratio="1" max-height="60px" class="mb-3" />
               <v-card-title v-text="card.title"></v-card-title>
               <v-spacer></v-spacer>
               <v-btn icon>
@@ -71,7 +71,7 @@ export default {
       },
       {
         title: "Mi café 2X1",
-        src: "https://ak.picdn.net/shutterstock/videos/24599282/thumb/3.jpg",
+        src: "https://hawkai-frontend.s3.amazonaws.com/logos-feed/arturo_calle.jpg",
         flex: 12
       }
     ],

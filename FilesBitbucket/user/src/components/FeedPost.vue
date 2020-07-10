@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" max-width="500" @click.stop="dialog=true">
+  <v-card class="mx-auto" max-width="500">
     <v-container fluid>
       <v-row dense>
         <v-col v-for="card in cards" :key="card.title" :cols="card.flex">
@@ -9,6 +9,7 @@
               class="white--text align-end"
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               height="300px"
+              @click.stop=open_modal(card.id)
             >
             </v-img>
 
@@ -38,17 +39,17 @@
           <v-img
             class="white--text align-end"
             height="300px"
-            src="https://ak.picdn.net/shutterstock/videos/24599282/thumb/3.jpg"
+            :src="temp_card.src"
           >
-            <v-card-title>Mi café 2X1</v-card-title>
+            <v-card-title>{{temp_card.title}}</v-card-title>
           </v-img>
 
-          <v-card-subtitle class="pb-0">10 cúpones restantes</v-card-subtitle>
+          <v-card-subtitle class="pb-0">{{temp_card.remaining}} cúpones restantes</v-card-subtitle>
 
           <v-card-text class="text--primary">
-            <div>2x1 en cafés tradicionales</div>
+            <div>{{temp_card.description}}</div>
 
-            <div>Aplica en zona 10 de lunes a jueves</div>
+            <div>{{temp_card.conditions}}</div>
           </v-card-text>
 
           <v-card-actions>
@@ -68,8 +69,16 @@ import posts from "../assets/feed_test/posts.json"
 export default {
   data: () => ({
     cards: posts.data,
-    dialog: false
-  })
+    dialog: false,
+    temp_card:''
+  }),
+  methods:{
+    open_modal(id){
+      this.temp_card = this.cards[id];
+      this.dialog = true;
+      console.log(id);
+    }
+  }
 };
 </script>
 

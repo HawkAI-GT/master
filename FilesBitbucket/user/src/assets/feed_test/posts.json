@@ -1,24 +1,44 @@
 {"data":[
     {
-    "title": "2x1 en café americano",
-    "src": "https://hawkai-frontend.s3.amazonaws.com/images-feed/starbucks.jpg",
-    "logo": "https://hawkai-frontend.s3.amazonaws.com/logos-feed/starbucks.jpg",
-    "flex": 12
+        "id":0,
+        "company":"Starbucks Coffee",
+        "title": "2x1 en café americano",
+        "description":"2x1 en cualquier café tradicional, aplica en frío, caliente y frozen.",
+        "conditions":"Aplica en zona 10 de lunes a jueves",
+        "remaining":50,
+        "src": "https://hawkai-frontend.s3.amazonaws.com/images-feed/starbucks.jpg",
+        "logo": "https://hawkai-frontend.s3.amazonaws.com/logos-feed/starbucks.jpg",
+        "flex": 12
     },
     {
+        "id":1,
+        "company":"Arturo Calle",
         "title": "Segundo par a mitad de precio!",
+        "description":"Promoción disponible para cualquier estilo masculino en temporada.",
+        "conditions":"Aplica en Cayalá y en Oakland Mall",
+        "remaining":23,
         "src": "https://hawkai-frontend.s3.amazonaws.com/images-feed/arturo-calle.jpg",
         "logo": "https://hawkai-frontend.s3.amazonaws.com/logos-feed/arturo_calle.jpg",
         "flex": 12
     },
     {
+        "id":2,
+        "company":"Palettamerica",
         "title": "30% de descuento al comprar 2 paletas",
+        "description":"Al comprar 2 paletas de cualquier sabor con topping gratis te regalamos el 30% de descuento.",
+        "conditions":"Disponible en Oakland Mall y Plaza Fontabella este fin de semana!",
+        "remaining":8,
         "src": "https://hawkai-frontend.s3.amazonaws.com/images-feed/palettamerica.jpg",
         "logo": "https://hawkai-frontend.s3.amazonaws.com/logos-feed/palettamerica.jpg",
         "flex": 12
     },
     {
+        "id":3,
+        "company":"Saúl",
         "title": "Copa de vino gratis en la compra de 4 crepes",
+        "description":"En la compra de 4 crepes Dolce Vita te regalamos una copa de vino blanco o tinto.",
+        "conditions":"Promoción disponible durante todo noviembre",
+        "remaining":89,
         "src": "https://hawkai-frontend.s3.amazonaws.com/images-feed/saul.jpg",
         "logo": "https://hawkai-frontend.s3.amazonaws.com/logos-feed/saul.jpg",
         "flex": 12

@@ -18,11 +18,11 @@ export default {
 }
 
 #landing-page {
-  background-image: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(59, 59, 177, 1) 50%,
-    rgba(0, 212, 255, 1) 150%
+  background-image: radial-gradient(
+    circle,
+    rgba(59, 59, 177, 1) 5%,
+    rgba(0, 212, 255, 1) 50%,
+    rgba(59, 59, 177, 1) 100%
   );
 
   height: 100vh;

@@ -1,7 +1,6 @@
 <template>
   <v-bottom-navigation
     fixed
-    :value="activeBtn"
     grow
     color="blue"
     style="
@@ -35,10 +34,9 @@ box-shadow: 0px -2px 23px -7px rgba(0,0,0,0.75);
 
 <script>
 export default {
+  name: "BottomNav",
   data() {
-    return {
-      activeBtn: 0
-    };
+    return {};
   }
 };
 </script>

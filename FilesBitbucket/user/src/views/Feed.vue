@@ -4,7 +4,7 @@
     <FeedPost></FeedPost>
     <FeedPost></FeedPost>
     <FeedPost style="margin-bottom: 8vh;"></FeedPost>
-    <BottomNav></BottomNav>
+    <BottomNav />
   </div>
 </template>
 <script>

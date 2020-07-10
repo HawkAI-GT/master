@@ -36,7 +36,7 @@ export default {
         name: "Marcus Obrien",
         mall: "Oakland Mall",
         age: "26",
-        email: "example@aja.com",
+        email: "marcus@hawkai.me",
         dir: "My house",
         phone: "+502 3404-4860"
       }

@@ -15,6 +15,11 @@
         </div>
       </div>
     </v-row>
+    <v-row justify="center" class="my-3">
+      <v-btn outlined rounded color="blue darken-4" to="/userprofile" dark>
+        <v-icon class="mr-2">mdi-account-edit</v-icon>Edit
+      </v-btn>
+    </v-row>
   </div>
 </template>
 

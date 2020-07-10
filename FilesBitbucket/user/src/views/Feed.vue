@@ -1,8 +1,6 @@
 <template>
   <div>
     <TopNav></TopNav>
-    <FeedPost></FeedPost>
-    <FeedPost></FeedPost>
     <FeedPost style="margin-bottom: 8vh;"></FeedPost>
     <BottomNav />
   </div>

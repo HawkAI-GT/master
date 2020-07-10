@@ -7,7 +7,6 @@
             <v-img
               :src="card.src"
               class="white--text align-end"
-              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
               height="300px"
               @click.stop=open_modal(card.id)
             >
@@ -36,8 +35,21 @@
       </v-row>
       <v-dialog v-model="dialog" max-width="90vw">
         <v-card class="mx-auto" max-width="400">
+          <v-card-title>
+            <v-list-item-avatar color="grey darken-3" size="50">
+              <v-img
+                :src="temp_card.logo"
+                class="ma-2"
+              >
+            </v-img>
+          </v-list-item-avatar>
+          <v-list-item-content>
+            <v-list-item-title>{{temp_card.company}}</v-list-item-title>
+          </v-list-item-content>
+          </v-card-title>
           <v-img
             class="white--text align-end"
+            gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,0.8)"
             height="300px"
             :src="temp_card.src"
           >
@@ -53,9 +65,16 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn color="blue darken-1" text @click="dialog = false">Reclamar</v-btn>
+            <v-btn class="text-none bigger" color="blue darken-1" text @click="dialog = false">Reclamar</v-btn>
 
-            <v-btn color="blue darken-1" text @click="dialog = false">Compartir</v-btn>
+            <v-btn class="text-none bigger" color="blue darken-1" text @click="dialog = false">Compartir</v-btn>
+            <v-spacer></v-spacer>
+            <v-btn icon>
+                <v-icon medium>mdi-heart</v-icon>
+            </v-btn>
+            <v-btn icon medium>
+              <v-icon>mdi-share-variant</v-icon>
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
@@ -86,6 +105,10 @@ export default {
 
 .rounded-card{
   border-radius: 15%;
+}
+
+.bigger{
+  font-weight: bold;
 }
 
 </style>

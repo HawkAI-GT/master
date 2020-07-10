@@ -2,7 +2,7 @@
   <div>
     <TopNav></TopNav>
     <FeedPost style="margin-bottom: 8vh;"></FeedPost>
-    <BottomNav></BottomNav>
+    <BottomNav />
   </div>
 </template>
 <script>

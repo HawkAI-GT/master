@@ -13,13 +13,20 @@
             </v-img>
 
             <v-card-actions>
-              <v-img :src="card.src" contain aspect-ratio="1" max-height="60px" class="mb-3" />
-              <v-card-title v-text="card.title"></v-card-title>
-              <v-spacer></v-spacer>
+              <v-list-item-avatar color="grey darken-3" size="50">
+                <v-img
+                  :src="card.logo"
+                  class="ma-2"
+                >
+                </v-img>
+              </v-list-item-avatar>
+              <v-list-item-content>
+                <v-list-item-title>{{card.title}}</v-list-item-title>
+              </v-list-item-content>
               <v-btn icon>
-                <v-icon x-large>mdi-heart</v-icon>
+                <v-icon large>mdi-heart</v-icon>
               </v-btn>
-              <v-btn icon x-large>
+              <v-btn icon large>
                 <v-icon>mdi-share-variant</v-icon>
               </v-btn>
             </v-card-actions>
@@ -56,25 +63,11 @@
 </template>
 
 <script>
+import posts from "../assets/feed_test/posts.json"
+
 export default {
   data: () => ({
-    cards: [
-      {
-        title: "Mi café 2X1",
-        src: "https://ak.picdn.net/shutterstock/videos/24599282/thumb/3.jpg",
-        flex: 12
-      },
-      {
-        title: "Mi café 2X1",
-        src: "https://ak.picdn.net/shutterstock/videos/24599282/thumb/3.jpg",
-        flex: 12
-      },
-      {
-        title: "Mi café 2X1",
-        src: "https://hawkai-frontend.s3.amazonaws.com/logos-feed/arturo_calle.jpg",
-        flex: 12
-      }
-    ],
+    cards: posts.data,
     dialog: false
   })
 };

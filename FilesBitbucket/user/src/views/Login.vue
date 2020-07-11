@@ -7,7 +7,7 @@
         <v-row>
           <v-col>
             <v-text-field
-              label="Username"
+              label="Username "
               v-model="username"
               name="username"
               single-line

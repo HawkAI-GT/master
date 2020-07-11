@@ -20,9 +20,9 @@ export default {
 #landing-page {
   background-image: radial-gradient(
     circle,
-    rgba(59, 59, 177, 1) 5%,
-    rgba(0, 212, 255, 1) 50%,
-    rgba(59, 59, 177, 1) 100%
+    rgb(128, 212, 236),
+    rgba(128, 212, 236, 1) 0%,
+    rgba(87, 134, 190, 1) 100%
   );
 
   height: 100vh;

@@ -4,7 +4,7 @@
       <v-row justify="center" align="center">
         <v-col cols="10" class="text-center">
           <v-text-field
-            style="font-family: auto;"
+            :style="{fontFamily: 'monospace'}"
             v-model="info.name"
             :rules="campoRules"
             label="Solo"
@@ -13,7 +13,7 @@
             required
           ></v-text-field>
           <v-text-field
-            style="font-family: auto;"
+            :style="{fontFamily: 'monospace'}"
             v-model="info.email"
             :rules="campoRules"
             label="Solo"
@@ -22,7 +22,7 @@
             required
           ></v-text-field>
           <v-text-field
-            style="font-family: auto;"
+            :style="{fontFamily: 'monospace'}"
             v-model="info.password"
             :rules="campoRules"
             :append-icon="showp ? 'mdi-eye' : 'mdi-eye-off'"

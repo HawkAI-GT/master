@@ -6,6 +6,7 @@
       <v-container class="formContainer">
         <v-row>
           <v-col>
+            <h1>error</h1>
             <v-text-field
               label="Username"
               v-model="username"

@@ -7,6 +7,7 @@
         <v-row>
           <v-col>
             <v-text-field
+              style="font-family: auto;"
               label="Username "
               v-model="username"
               name="username"
@@ -16,6 +17,7 @@
               @click="tryAgain"
             ></v-text-field>
             <v-text-field
+              style="font-family: auto;"
               :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
               :type="showPassword ? 'text' : 'password'"
               label="Password"

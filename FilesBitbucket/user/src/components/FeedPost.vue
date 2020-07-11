@@ -8,17 +8,12 @@
               :src="card.src"
               class="white--text align-end"
               height="300px"
-              @click.stop=open_modal(card.id)
-            >
-            </v-img>
+              @click.stop="open_modal(card.id)"
+            ></v-img>
 
             <v-card-actions>
               <v-list-item-avatar color="grey darken-3" size="50">
-                <v-img
-                  :src="card.logo"
-                  class="ma-2"
-                >
-                </v-img>
+                <v-img :src="card.logo" class="ma-2"></v-img>
               </v-list-item-avatar>
               <v-list-item-content>
                 <v-list-item-title>{{card.title}}</v-list-item-title>
@@ -37,15 +32,11 @@
         <v-card class="mx-auto" max-width="400">
           <v-card-title>
             <v-list-item-avatar color="grey darken-3" size="50">
-              <v-img
-                :src="temp_card.logo"
-                class="ma-2"
-              >
-            </v-img>
-          </v-list-item-avatar>
-          <v-list-item-content>
-            <v-list-item-title>{{temp_card.company}}</v-list-item-title>
-          </v-list-item-content>
+              <v-img :src="temp_card.logo" class="ma-2"></v-img>
+            </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title>{{temp_card.company}}</v-list-item-title>
+            </v-list-item-content>
           </v-card-title>
           <v-img
             class="white--text align-end"
@@ -65,12 +56,22 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn class="text-none bigger" color="blue darken-1" text @click="dialog = false">Reclamar</v-btn>
+            <v-btn
+              class="text-none bigger"
+              color="blue darken-1"
+              text
+              @click="dialog = false"
+            >Reclamar</v-btn>
 
-            <v-btn class="text-none bigger" color="blue darken-1" text @click="dialog = false">Compartir</v-btn>
+            <v-btn
+              class="text-none bigger"
+              color="blue darken-1"
+              text
+              @click="dialog = false"
+            >Compartir</v-btn>
             <v-spacer></v-spacer>
             <v-btn icon>
-                <v-icon medium>mdi-heart</v-icon>
+              <v-icon medium>mdi-heart</v-icon>
             </v-btn>
             <v-btn icon medium>
               <v-icon>mdi-share-variant</v-icon>
@@ -83,16 +84,16 @@
 </template>
 
 <script>
-import posts from "../assets/feed_test/posts.json"
+import posts from "../assets/feed_test/posts.json";
 
 export default {
   data: () => ({
     cards: posts.data,
     dialog: false,
-    temp_card:''
+    temp_card: ""
   }),
-  methods:{
-    open_modal(id){
+  methods: {
+    open_modal(id) {
       this.temp_card = this.cards[id];
       this.dialog = true;
       console.log(id);
@@ -102,13 +103,11 @@ export default {
 </script>
 
 <style scoped>
-
-.rounded-card{
+.rounded-card {
   border-radius: 15%;
 }
 
-.bigger{
+.bigger {
   font-weight: bold;
 }
-
 </style>

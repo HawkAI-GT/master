@@ -1,49 +1,22 @@
 <template>
-  <div>
-    <v-row justify="center">
-      <v-avatar class="mt-14 mb-7 gradient-1" size="100">
-        <v-icon :style="{ fontSize: '75px' }" dark>mdi-account</v-icon>
-      </v-avatar>
+  <v-img height="100%" src="https://cdn.vuetifyjs.com/images/cards/server-room.jpg">
+    <v-row align="end" class="fill-height">
+      <v-col align-self="start" class="pa-0" cols="12">
+        <v-avatar class="profile" color="grey" size="164" tile>
+          <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"></v-img>
+        </v-avatar>
+      </v-col>
+      <v-col class="py-0">
+        <v-list-item color="rgba(0, 0, 0, .4)" dark>
+          <v-list-item-content>
+            <v-list-item-title class="title">{{user.name}}</v-list-item-title>
+            <v-list-item-subtitle>{{user.mall}}</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-col>
     </v-row>
-    <v-row justify="center">
-      <div>
-        <div class="d-block">
-          <h2>{{user.name}}</h2>
-        </div>
-        <div class="d-block blue-grey--text text--lighten-2">
-          <h3>{{user.email}}</h3>
-        </div>
-      </div>
-    </v-row>
-    <v-row justify="center" class="my-3">
-      <v-btn outlined rounded color="blue darken-4" to="/userprofile" dark>
-        <v-icon class="mr-2">mdi-account-edit</v-icon>Edit
-      </v-btn>
-    </v-row>
-  </div>
+  </v-img>
 </template>
-
-<style>
-.gradient-1 {
-  background: rgb(128, 212, 236);
-  background: -moz-radial-gradient(
-    circle,
-    rgba(128, 212, 236, 1) 0%,
-    rgba(87, 134, 190, 1) 100%
-  );
-  background: -webkit-radial-gradient(
-    circle,
-    rgba(128, 212, 236, 1) 0%,
-    rgba(87, 134, 190, 1) 100%
-  );
-  background: radial-gradient(
-    circle,
-    rgba(128, 212, 236, 1) 0%,
-    rgba(87, 134, 190, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#80d4ec",endColorstr="#5786be",GradientType=1);
-}
-</style>
 
 <script>
 export default {

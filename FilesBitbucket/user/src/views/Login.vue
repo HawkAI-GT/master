@@ -36,7 +36,7 @@
         </v-row>
         <v-row>
           <v-col>
-            <v-btn class="button" color="#002649" style="width: 100%" @click="simpleLogIn">Log In</v-btn>
+            <v-btn class="button" color="#002649" style="width: 100%" @click="simpleLogIn">Log In 2</v-btn>
           </v-col>
         </v-row>
         <v-row>

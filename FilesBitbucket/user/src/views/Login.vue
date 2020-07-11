@@ -1,4 +1,5 @@
-<div>
+<template>
+  <div>
     <LoginBackground />
 
     <v-form>

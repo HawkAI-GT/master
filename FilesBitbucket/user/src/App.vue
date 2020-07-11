@@ -17,7 +17,14 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {},
+  metaInfo: {
+    meta: [
+      { charset: "utf-8" },
+      { name: "description", content: "gator" },
+      { name: "viewport", content: "width=device-width, user-scalable=no" }
+    ]
+  }
 };
 </script>
 

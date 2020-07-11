@@ -36,7 +36,12 @@
         </v-row>
         <v-row>
           <v-col>
-            <v-btn class="button"  color="#002649" style="width: 100%" @click="simpleLogIn">Log In</v-btn>
+            <v-btn
+              class="button"
+              color="#002649"
+              style="width: 100%"
+              @click="simpleLogIn"
+            >Log In with Buddy 2</v-btn>
           </v-col>
         </v-row>
         <v-row>
@@ -56,7 +61,7 @@
 <script>
 import LoginBackground from "../components/LoginBackground";
 import FacebookLoginButton from "../components/FacebookLoginButton";
-import firebase from "firebase"
+import firebase from "firebase";
 
 export default {
   name: "Login",
@@ -66,7 +71,7 @@ export default {
   },
   data() {
     return {
-      errormsg: '',
+      errormsg: "",
       showPassword: false,
       username: "",
       password: ""
@@ -79,21 +84,21 @@ export default {
         .auth()
         .signInWithEmailAndPassword(this.username, this.password)
         .then(data => {
-          this.$router.replace({name: 'Feed'});
+          this.$router.replace({ name: "Feed" });
           console.log(data.username);
         })
         .catch(err => {
           console.log(err);
-          this.errormsg = "Mail or password is not correct!"
-        })
+          this.errormsg = "Mail or password is not correct!";
+        });
     },
     gotoSignUp() {
       //TODO: Router-link to sign up page
       console.log("Redirect to SignUp page");
-      this.$router.replace({name: 'SignUp'});
+      this.$router.replace({ name: "SignUp" });
     },
-    tryAgain(){
-      this.errormsg = '';
+    tryAgain() {
+      this.errormsg = "";
     }
   }
 };
@@ -114,7 +119,7 @@ export default {
   font-size: 0.8rem;
 }
 
-.errormsg{
-  color: red
+.errormsg {
+  color: red;
 }
 </style>

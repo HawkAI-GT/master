@@ -7,6 +7,7 @@
         <v-row>
           <v-col>
             <v-text-field
+              :style="{fontFamily: 'monospace'}"
               label="Username"
               v-model="username"
               name="username"

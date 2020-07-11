@@ -6,9 +6,8 @@
       <v-container class="formContainer">
         <v-row>
           <v-col>
-            <h1>Hello!</h1>
             <v-text-field
-              label="Username "
+              label="Username"
               v-model="username"
               name="username"
               single-line
@@ -16,7 +15,6 @@
               dense
               @click="tryAgain"
             ></v-text-field>
-            <h1>Hello :)</h1>
             <v-text-field
               :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
               :type="showPassword ? 'text' : 'password'"
@@ -38,7 +36,7 @@
         </v-row>
         <v-row>
           <v-col>
-            <v-btn class="button" color="#002649" style="width: 100%" @click="simpleLogIn">Log In 2</v-btn>
+            <v-btn class="button" color="#002649" style="width: 100%" @click="simpleLogIn">Log In</v-btn>
           </v-col>
         </v-row>
         <v-row>

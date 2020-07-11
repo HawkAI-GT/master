@@ -16,6 +16,7 @@
               @click="tryAgain"
             ></v-text-field>
             <v-text-field
+              :style="{fontFamily: 'monospace'}"
               :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
               :type="showPassword ? 'text' : 'password'"
               label="Password"

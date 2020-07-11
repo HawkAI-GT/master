@@ -1,8 +1,4 @@
 import { mount } from '@vue/test-utils'
-import User from '@/views/User.vue'
-import EditProfile from '@/views/EditProfile.vue'
-import UserInfo from "@/components/UserInfo";
-import ButtonEdit from "@/components/ButtonEdit";
 import AccountInfo from "@/components/AccountInfo";
 import Support from "@/components/Support";
 import BottomNav from "@/components/BottomNav";
@@ -13,10 +9,6 @@ describe('Component', () => {
     // const wrapper = mount(User)
 
 
-    test('ButtonEdit is a Vue instance?', () => {
-        const wrapper = mount(ButtonEdit)
-        expect(wrapper.isVueInstance()).toBeTruthy()
-    })
     test('AccountInfo is a Vue instance?', () => {
         const wrapper = mount(AccountInfo)
         expect(wrapper.isVueInstance()).toBeTruthy()

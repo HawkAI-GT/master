@@ -25,5 +25,5 @@ steps:
     cd FilesBitbucket/user/
     npm install
     npm run test:unit
-    npm run build
-  displayName: 'npm install and build'
+    cypress run
+  displayName: 'Testing'

@@ -22,7 +22,7 @@ steps:
   displayName: 'Libraries to run Cypress'
 
 - script: |
-    ls
+    cd FilesBitbucket/user/
     npm install
     npm run test:unit
     npm run build
